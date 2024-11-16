@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
 import { useState , useEffect, useContext, createContext} from "react";
-import { auth } from "../../firebase";
-import { getDoc } from "firebase/firestore";
+import { auth,db } from "../../firebase";
+import { doc, getDoc } from "firebase/firestore";
 const AuthContext = createContext()
 
 export function useAuth(){
@@ -29,7 +29,7 @@ export function AuthProvider(props) {
     }
 
     function logout(){
-        setUser(null)
+        setGlobalUser(null)
         setGlobalData(null)
         return signOut(auth)
     }
@@ -37,10 +37,17 @@ export function AuthProvider(props) {
     useEffect(() => {
        const unsubscribe= onAuthStateChanged(auth, async (user) => { 
 
-            if(!user) { return }
+            console.log('CURRENT USER : ',user)
+            setGlobalUser(user)
+
+            if(!user) { 
+                console.log('Found user data')
+                setGlobalUser(null)
+                return }
 
             try{
                 setIsLoading(true)
+                setGlobalUser(user)
 
                 // first we create reference for that document, then we gete the doc and then we snapshot it to see if anything's there
                 const docRef= doc(db, 'users', user.uid)
@@ -65,7 +72,7 @@ export function AuthProvider(props) {
         return unsubscribe
     },[])
 
-    const value = { globalUser, globalData, setGlobalData, isLoading, signup, login, logout }
+    const value = { globalUser, globalData, setGlobalData, isLoading, signup, login, logout, resetPassword }
 
 
     return (
