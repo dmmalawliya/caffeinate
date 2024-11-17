@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# ☕ Caffeinate
+## Track Your Coffee Habits Efficiently
+Caffeinate is a modern coffee tracker app designed to help you keep tabs on your caffeine intake, track patterns, and gain insights into your coffee habits. Built with Firebase for secure authentication and Firestore for real-time data management, Caffeinate provides users with personalized statistics and a seamless experience
