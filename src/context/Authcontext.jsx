@@ -8,7 +8,7 @@ const AuthContext = createContext()
 export function useAuth() {
     return useContext(AuthContext)
 }
-
+//rename the file
 export function AuthProvider(props) {
     const { children } = props
     const [globalUser, setGlobalUser] = useState(null)
