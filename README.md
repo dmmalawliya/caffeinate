@@ -60,10 +60,16 @@ Ensure you have the following installed:
 
 # 📸 Screenshots
 ## Homepage
+![Screenshot 2024-11-19 023246](https://github.com/user-attachments/assets/200d036e-e1fe-4195-b8e1-b7d11c8f82d2)
+![Screenshot 2024-11-19 023331](https://github.com/user-attachments/assets/969f881b-aa7f-4d23-998c-f807345846fe)
+![Screenshot 2024-11-19 023544](https://github.com/user-attachments/assets/d5ddfaf4-9a30-465e-a717-a85cad67b848)
+![Screenshot 2024-11-19 023619](https://github.com/user-attachments/assets/04256925-d682-4e9f-8e7f-b92d6fe5c951)
+
+![Screenshot 2024-11-19 023640](https://github.com/user-attachments/assets/dcb3a16e-62a4-446a-8127-a2cdb9bd3cd4)
 
 
+# 🛡️ Security!
 
-# 🛡️ Security
 Caffeinate uses Firebase for secure authentication and data storage, ensuring your information stays private and safe.
 
 # 🛠️ Contributing
